@@ -17,13 +17,19 @@
         <div class="row">
             <div class="col col-12">
                 <% if(result.page >2) { %>
-                <a style="float:left" href="/articles/page/<%=result.page-1%>"> prev page<<< /a>
+                <a style="float:left" href="/articles/page/<%=result.page-1%>"> <img src="https://img.icons8.com/small/50/000000/back.png"/> </a>
+                    <br>
+                    <label style="float:left">Página Anterior</label>
                         <%} else if(result.page ==2){%>
-                            <a style="float:left" href="/"> prev page<< </a>
-                        <%}%>
+                            <a style="float:left" href="/"><img src="https://img.icons8.com/small/50/000000/back.png"/></a>
+                            <br>
+                            <label style="float:left">Página Anterior</label>
+                            <%}%>
               
                 <%if(result.next){ %>
-                        <a style="float:right" href="/articles/page/<%=result.page+1%>">next page >></a>
+                    <a style="float:right"href="/articles/page/2"><img src="https://img.icons8.com/small/48/000000/more-than.png"/></a>
+                    <br>
+                    <label style="float:right">Próxima Pagina</label>
                         <%}%>
             </div>
             <hr>
