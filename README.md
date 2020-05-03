@@ -25,6 +25,11 @@ baseado no curso https://www.udemy.com/course/formacao-nodejs/
 
 ![alt text](https://github.com/Gabriel-Castilho/Blog_Crud/blob/master/Screenshots/6.png)
 
+<h3>Criando novo artigo </h3>
+
+![10](https://user-images.githubusercontent.com/57070964/80926301-c89df180-8d6c-11ea-9769-3f7c9cd52b27.png)
+
+
 <h3>Parte administrativa Usuários </h3> 
 
 ![alt text](https://github.com/Gabriel-Castilho/Blog_Crud/blob/master/Screenshots/7.png)
