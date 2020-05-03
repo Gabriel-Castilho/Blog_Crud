@@ -1,0 +1,33 @@
+
+<nav class ="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class = "navbar-brand" href="/">
+        Nome do Blog/Name Blog
+    </a>
+    <ul class="navbar-nav mr-auto">
+       
+        <%categories.forEach(category=>{ %>
+            <li class="nav-item">
+                <a class="nav-link" href="/category/<%=category.slug%>"><%=category.title %></a>           
+            </li>
+        <% })%>
+        
+                
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle ml-auto" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Opções/Options
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/login" id="teste">Login</a>
+              <a class="dropdown-item" href="/admin/articles">Painel Administrativo</a>
+              <a class="dropdown-item" href="/logout">Logout</a>
+            </div>
+          </div>
+    </ul>
+
+</nav>
+
+
+
+

@@ -1,0 +1,61 @@
+<%-include('../../partials/header.ejs') %>
+<%-include('../../partials/navbar.ejs') %>
+
+<div class="container">
+    <hr>
+    <h2>Artigos/Articles</h2>
+    <hr>
+    <a href="/admin/articles/new" class="btn btn-success">Criar novo artigo/Create new Article</a>
+    <hr>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título/Title</th>
+                <th>Slug</th>
+                <th>Categoria/Category</th>
+                <th>Ações/Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% articles.forEach(article =>{ %>
+            <tr>
+                <th><%=article.id%></th>
+                <th><%=article.title%></th>
+                <th><%=article.slug%></th>
+                <th><%=article.category.title %></th>
+                <th>
+                    <a href="/admin/articles/edit/<%= article.id%>" class="btn btn-warning ">Editar/Edit </a>
+
+                    <form method="POST" action="/articles/delete" style="display:inline;"
+                        onsubmit="confirmDelete(event,this)">
+                        <input type="hidden" name="id" value="<%=article.id%>">
+                        <button class="btn btn-danger"> Deletar/Delete</button>
+                    </form>
+
+                </th>
+            </tr>
+            <%})%>
+
+
+        </tbody>
+    </table>
+
+
+</div>
+
+<%-include('../../partials/footer.ejs') %>
+
+<script>
+    function confirmDelete(event, form) {
+        event.preventDefault();
+        let decision = confirm("Deseja realmente deletar este artigo?");
+        if (decision) {
+            alert("Categoria deleteda")
+            form.submit();
+        } else {
+            alert("Categoria não deletada")
+        }
+    }
+
+</script>

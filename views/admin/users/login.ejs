@@ -1,0 +1,32 @@
+<%-include('../../partials/header.ejs') %>
+
+
+<div class="container">
+    <hr>
+    <div class="card mt-2">
+        <div class="card-header">
+            <h2>Login de Admin/Admin Login</h2>
+        </div>
+        
+        <div class="card-body"></div>
+        <form action="/authenticate" method="POST" class="form">
+            <input class="form-control" name="email" type="email" placeholder="email@example.com"><br>
+            <input class="form-control" name="password" type="password" placeholder="password">
+            <br>
+            <button type="submit" class="btn btn-success btn-block">Entrar como Admin/Enter as Admin</button>
+        </form>
+    </div>
+
+
+</div>
+<%if(message){ %>
+   <div style="text-align: center;">
+
+    <strong><%=message%></strong>
+   </div>
+<%}%>
+
+<%-include('../../partials/footer.ejs') %>
+
+
+
